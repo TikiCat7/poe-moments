@@ -1,0 +1,50 @@
+$tablet: "(max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
+
+.App {
+  font-family: 'Fira Sans', sans-serif;
+  text-align: center;
+}
+
+.Topbar {
+  background-image: linear-gradient(-90deg, #543d70, #6c83c3);
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4;
+
+
+
+  &__menu-button {
+    cursor: pointer;
+    background: url('../images/bars-line.svg') no-repeat;
+    height: 40px;
+    max-width: 50px;
+    flex: 1;
+    margin-left: 5px;
+
+    &:hover {
+      transform: translateY(-5px);
+      transition: transform 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    font-weight: 800;
+    flex: 1;
+    color: white;
+
+    @media all and (max-width: 800px) {
+      font-size: 25px;
+    }
+  }
+
+    @media all and (max-width: 600px) {
+      .Topbar__title {
+        font-size: 18px;
+      }
+    }
+}
