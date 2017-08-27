@@ -1,5 +1,17 @@
-$tablet: "(max-width: 1023px)";
-$desktop: "(min-width: 1024px)";
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
 
 .App {
   font-family: 'Fira Sans', sans-serif;
@@ -14,8 +26,6 @@ $desktop: "(min-width: 1024px)";
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 4;
-
-
 
   &__menu-button {
     cursor: pointer;
@@ -32,19 +42,17 @@ $desktop: "(min-width: 1024px)";
   }
 
   &__title {
-    font-size: 30px;
+    font-size: 12px;
     font-weight: 800;
     flex: 1;
     color: white;
 
-    @media all and (max-width: 800px) {
-      font-size: 25px;
+    @include tablet {
+      font-size: 18px;
+    }
+
+    @include desktop {
+      font-size: 30px;
     }
   }
-
-    @media all and (max-width: 600px) {
-      .Topbar__title {
-        font-size: 18px;
-      }
-    }
 }
