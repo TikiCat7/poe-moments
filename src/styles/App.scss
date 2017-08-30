@@ -1,6 +1,10 @@
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
+$base:#6363E4;
+$base--hover:#7171E3;
+$secondary: #E7DFF3;
+
 @mixin tablet {
   @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
     @content;
@@ -26,7 +30,7 @@ $desktop-width: 1024px;
 }
 
 .Topbar {
-  background-image: linear-gradient(-90deg, #543d70, #6c83c3);
+  background-color: $base;
   width: 100%;
   height: 60px;
   display: flex;
@@ -52,7 +56,7 @@ $desktop-width: 1024px;
   }
 
   &__title {
-    font-size: 12px;
+    font-size: 20px;
     font-weight: 800;
     flex: 1;
     color: white;
@@ -67,8 +71,44 @@ $desktop-width: 1024px;
   }
 }
 
-.LandingContent {
+.Button {
+  border-radius: 4px;
+  display: inline-block;
+  background-color:$base;
+  color: white;
+  font-size: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  line-height: 20px;
+  height: 20px;
+  box-shadow: 0px 6px 7px 0px rgba(113, 113, 227, 0.3);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .025em;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
 
+  &:hover{
+    background-color: $base--hover;
+    transform: translateY(-1px);
+    box-shadow: 1px 6px 7px 0px rgba(113, 113, 227, 0.63);
+  }
+}
+
+.LandingContent {
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   left: 0;
+  //   right: 0;
+  //   top: 600px;
+  //   height: 2000px;
+  //   background: #f6f9fc;
+  //   transform: skew(0,-12deg);
+  // }
+  background: transparent;
   &__flex-container {
 
     // only want nav magin for first child
@@ -82,13 +122,14 @@ $desktop-width: 1024px;
     justify-content: center;
 
     &__flex-item {
-      height: 150px;
+      height: 300px;
       width: 100%;
-      background-color: #D5D5D5;
+      background-color: $secondary;
       margin: 2px;
+      flex-direction: column;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-evenly;
       // medium nav bar uses this box shadow.
       // box-shadow: 0 2px 2px -2px rgba(0,0,0,.15);
 
@@ -112,8 +153,8 @@ $desktop-width: 1024px;
 
   &__item-content {
     font-size: 15px;
-    color: salmon;
-
+    color: #7277FA;
+    display: flex;
     @include desktop {
       font-size: 30px;
     }
@@ -121,5 +162,21 @@ $desktop-width: 1024px;
     @include tablet {
       font-size: 20px;
     }
+  }
+
+  &__items-card {
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    width: 85%;
+    flex-direction: column;
+    height: 70%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.1);
+  }
+
+  .Button {
+    margin-right: 5px;
   }
 }

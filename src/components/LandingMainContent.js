@@ -1,41 +1,29 @@
 import React, { Component } from 'react';
 
+import Item from './Item';
+
 class LandingMainContent extends Component {
   render() {
     return (
-      <div>
+      <div className="LandingContent">
         <div className="LandingContent__flex-container">
-          <div className="LandingContent__flex-container__flex-item" >
-            <div className="LandingContent__item-content">POE moment is blah blah blah blah</div>
-          </div>
-          <div className="LandingContent__flex-container__flex-item" >
-            <div className="LandingContent__item-content">POE moment is blah blah blah blah</div>
-          </div>
-          <div className="LandingContent__flex-container__flex-item" >
-            <div className="LandingContent__item-content">POE moment is blah blah blah blah</div>
-          </div>
+          <Item
+            title="Kripps Double Boss Death"
+            description="The most iconic moment in POE history"
+            uri="KYUm0qM_R0g"
+          />
+          <Item />
+          <Item />
         </div>
         <div className="LandingContent__flex-container">
-          <div className="LandingContent__flex-container__flex-item" >
-            <div className="LandingContent__item-content">POE moment is blah blah blah blah</div>
-          </div>
-          <div className="LandingContent__flex-container__flex-item" >
-            <div className="LandingContent__item-content">POE moment is blah blah blah blah</div>
-          </div>
-          <div className="LandingContent__flex-container__flex-item" >
-            <div className="LandingContent__item-content">POE moment is blah blah blah blah</div>
-          </div>
+          <Item />
+          <Item />
+          <Item />
         </div>
         <div className="LandingContent__flex-container">
-          <div className="LandingContent__flex-container__flex-item" >
-            <div className="LandingContent__item-content">POE moment is blah blah blah blah</div>
-          </div>
-          <div className="LandingContent__flex-container__flex-item" >
-            <div className="LandingContent__item-content">POE moment is blah blah blah blah</div>
-          </div>
-          <div className="LandingContent__flex-container__flex-item" >
-            <div className="LandingContent__item-content">POE moment is blah blah blah blah</div>
-          </div>
+          <Item />
+          <Item />
+          <Item />
         </div>
       </div>
     );
