@@ -10,10 +10,18 @@ class LandingMainContent extends Component {
           <Item
             title="Kripps Double Boss Death"
             description="The most iconic moment in POE history"
-            uri="KYUm0qM_R0g"
+            src="KYUm0qM_R0g"
           />
-          <Item />
-          <Item />
+          <Item
+            title="Wrold first atziri kill HC"
+            description="Atziri down by atziri"
+            src="0AJdVgzVMLo"
+          />
+          <Item
+            title="Wrold first atziri kill HC"
+            description="Atziri down by atziri"
+            src="0AJdVgzVMLo"
+          />
         </div>
         <div className="LandingContent__flex-container">
           <Item />
