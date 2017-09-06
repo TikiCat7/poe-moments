@@ -2,23 +2,23 @@ import React, { Component } from 'react';
 
 import Item from './Item';
 
-class LandingMainContent extends Component {
+class MomentList extends Component {
   render() {
     return (
       <div className="LandingContent">
         <div className="LandingContent__flex-container">
           <Item
-            title="Kripps Double Boss Death"
+            title="#1 Kripps Double Boss Death"
             description="The most iconic moment in POE history"
             src="KYUm0qM_R0g"
           />
           <Item
-            title="Wrold first atziri kill HC"
+            title="#2 World first atziri kill HC"
             description="Atziri down by atziri"
             src="0AJdVgzVMLo"
           />
           <Item
-            title="Wrold first atziri kill HC"
+            title="#3 Wrold first atziri kill HC"
             description="Atziri down by atziri"
             src="0AJdVgzVMLo"
           />
@@ -38,4 +38,4 @@ class LandingMainContent extends Component {
   }
 }
 
-export default LandingMainContent;
+export default MomentList;
