@@ -1,13 +1,49 @@
 import React, { Component } from 'react';
 
 class Landing extends Component {
-  state = { text: 'welcome to POE moments ;)'  }
+  constructor() {
+    super();
+    this.state = {
+      blur: 0,
+    }
+  }
+  componentDidMount() {
+    // attach IntersectionObserver to top image
+    let options = {
+      root: null,
+      rootMargin: "-80px 0px 0px 0px",
+      threshold: []
+    }
+
+    // add threshold from 0.01 - 1
+    for(let i=0; i<1.0; i+=0.01) {
+      options.threshold.push(i);
+    }
+
+    const callback = (entries) => {
+      entries.forEach(entry => {
+        let box = entry.target;
+        let visiblePct = (entry.intersectionRatio * 10);
+        this.setState({
+          blur: 10 - visiblePct
+        })
+      });
+    }
+    let observer = new IntersectionObserver(callback, options);
+    let target = document.querySelector('.Landing__image-section');
+    observer.observe(target);
+  }
+
   render() {
     return (
       <div style={{ marginTop: '80px'}}>
-        <p>
-          {this.state.text}
-        </p>
+        <section className="Landing__image-section">
+          <div className="Landing__content"  style={{filter: `blur(${this.state.blur}px)`}}/>
+          <div className="Landing__aboveContent">Your favorite Poe moments.</div>
+        </section>
+        <section className="Landing__section Landing__section__light">Section 1</section>
+        <section className="Landing__section">Section 2</section>
+        <section className="Landing__section Landing__section__light">Section 3</section>
       </div>
     );
   }

@@ -42,26 +42,4 @@ const App = (props) => {
   )
 }
 
-const App2 = withRouter(({ location }) => {
-  const currentKey = location.pathname.split('/')[1] || '/';
-  const timeout = { enter: 500, exit: 500 }
-
-  return (
-    <div className="App">
-      <Topbar />
-      <TransitionGroup>
-        <CSSTransition key={currentKey}
-          timeout={timeout}
-          classNames="fade"
-        >
-          <Switch location={location}>
-            <Route exact path="/" component={Landing} />
-            <Route exact path="/momentlist" component={MomentList} />
-          </Switch>
-        </CSSTransition>
-      </TransitionGroup>
-    </div>
-  )
-});
-
 export default App;

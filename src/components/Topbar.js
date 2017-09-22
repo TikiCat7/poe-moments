@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import chaos_orb from '../images/chaos.jpeg';
 
 class Topbar extends Component {
   render() {

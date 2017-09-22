@@ -22,11 +22,16 @@ $secondary: #E7DFF3;
   text-align: center;
 }
 
+* {
+  font-family: 'Fira Sans', sans-serif;
+}
+
 .Topbar-container {
   position: fixed;
   top: 0;
   width: 100%;
   transition: top 0.2s ease-in-out;
+  z-index: 5;
 }
 
 .Topbar {
@@ -99,6 +104,80 @@ $secondary: #E7DFF3;
     background-color: $base--hover;
     transform: translateY(-1px);
     box-shadow: 1px 6px 7px 0px rgba(113, 113, 227, 0.63);
+  }
+}
+
+.Landing {
+
+  &__content {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: url('../images/kitava.gif') no-repeat;
+    background-position: center 15%;
+    background-size: 200%;
+    background-color: rgb(44, 44, 68);
+
+    @include desktop() {
+      background-size: 110%;
+      background-position: center 25%;
+    }
+  }
+
+  &__aboveContent {
+    position: relative;
+    top: 50%; // left: 50%;
+    font-size: 30px;
+    color: white;
+    font-weight: 800; // text-align: center;
+    z-index: -1;
+  }
+
+  &__main-image {
+    background: url('../images/kitava.gif') no-repeat;
+    background-position: center center;
+    // background-size: contain;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -1;
+    filter: blur(2px);
+
+    &:before {
+      content: 'aaa';
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      color: white;
+      font-size: 30px;
+      font-weight: 800;
+      position: relative;
+      top: 50%;
+      z-index: 1;
+    }
+  }
+
+  &__section {
+    background-color: $base--hover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__light {
+      background-color: rgba(113, 113, 227, 0.63);
+    }
+  }
+
+  &__image-section {
+    background-color: rgba(116, 116, 231, 0.22);
+    height: 500px;
+    position: relative;
   }
 }
 
