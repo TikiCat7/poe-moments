@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 const Item = ({ title, src }) => (
   <d className="LandingContent__flex-container__flex-item">
@@ -46,5 +47,10 @@ const Item = ({ title, src }) => (
     </div>
   </d>
 )
+
+Item.propTypes = {
+  tags: PropTypes.array.isRequired,
+  src: PropTypes.string.isRequired,
+}
 
 export default Item;

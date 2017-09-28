@@ -26,6 +26,10 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|svg|gif)$/,
         include: includePath,
         use: 'url-loader'
+      },
+      {
+        test: /\.md$/,
+        use: "raw-loader"
       }
     ],
   },

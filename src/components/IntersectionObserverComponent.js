@@ -46,9 +46,4 @@ class IntersectionObserverComponent extends Component {
   }
 }
 
-IntersectionObserverComponent.propTypes = {
-  children: PropTypes.func.isRequired,
-  target: PropTypes.string.isRequired,
-};
-
 export default IntersectionObserverComponent;
