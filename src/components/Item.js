@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 const Item = ({ title, src }) => (
-  <d className="LandingContent__flex-container__flex-item">
+  <div className="LandingContent__flex-container__flex-item">
     <p className="LandingContent__item-title">
       {title}
     </p>
@@ -45,11 +45,11 @@ const Item = ({ title, src }) => (
     <div className="LandingContent__item-content">
       <a className="Button">view</a>
     </div>
-  </d>
+  </div>
 )
 
 Item.propTypes = {
-  tags: PropTypes.array.isRequired,
+  tags: PropTypes.array,
   src: PropTypes.string.isRequired,
 }
 

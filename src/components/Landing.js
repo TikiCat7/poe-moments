@@ -29,9 +29,13 @@ class Landing extends Component {
         })
       });
     }
-    let observer = new IntersectionObserver(callback, options);
+    this.observer = new IntersectionObserver(callback, options);
     let target = document.querySelector('.Landing__image-section');
-    observer.observe(target);
+    this.observer.observe(target);
+  }
+
+  componentWillUnmount() {
+    this.observer.disconnect();
   }
 
   render() {
