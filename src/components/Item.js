@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
-const Item = ({ title, src }) => (
+const Item = ({ title, src, id }) => (
   <div className="LandingContent__flex-container__flex-item">
     <p className="LandingContent__item-title">
       {title}
@@ -43,7 +44,7 @@ const Item = ({ title, src }) => (
       />
     </div>
     <div className="LandingContent__item-content">
-      <a className="Button">view</a>
+      <Link className="Button" to={`/moment/${id}`}>View</Link>
     </div>
   </div>
 )

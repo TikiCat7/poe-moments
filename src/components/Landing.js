@@ -8,6 +8,8 @@ class Landing extends Component {
     }
   }
   componentDidMount() {
+
+    window.scrollTo(0,0);
     // attach IntersectionObserver to top image
     let options = {
       root: null,

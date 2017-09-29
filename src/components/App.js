@@ -6,22 +6,24 @@ import '../styles/App.css';
 import Topbar from './Topbar'
 import MomentList from './MomentList';
 import Landing from './Landing';
+import Moment from './Moment';
 
 const Layout = ({ children }) => (
   <section className="App">
    <Topbar />
     {children}
   </section>
-)
-const PageFade = (props) => (
-  <CSSTransition
-    {...props}
-    classNames="fadeTranslate"
-    timeout={1000}
-    mountOnEnter={true}
-    unmountOnExit={true}
-  />
-)
+);
+const PageFade = (props) => {
+  console.log(props)
+  return (
+    <CSSTransition
+      {...props}
+      classNames="fadeTranslate"
+      timeout={1000}
+    />
+  )
+};
 
 const App = (props) => {
   const locationKey = props.location.pathname
@@ -34,12 +36,13 @@ const App = (props) => {
             <Switch location={props.location}>
               <Route exact path="/" component={Landing} />
               <Route exact path="/momentlist" component={MomentList} />
+              <Route path="/moment/:id" component={Moment} />
             </Switch>
           </section>
         </PageFade>
       </TransitionGroup>
     </Layout>
-  )
+  );
 }
 
 export default App;
