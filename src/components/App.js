@@ -34,9 +34,9 @@ const App = (props) => {
         <PageFade key={locationKey}>
           <section className="fix-container">
             <Switch location={props.location}>
-              <Route exact path="/" component={Landing} />
-              <Route exact path="/momentlist" component={MomentList} />
-              <Route path="/moment/:id" component={Moment} />
+              <Route exact path={process.env.PUBLIC_URL + '/'} component={Landing} />
+              <Route exact path={process.env.PUBLIC_URL + '/momentlist'} component={MomentList} />
+              <Route  path={process.env.PUBLIC_URL + '/moment/:id'} component={Moment} />
             </Switch>
           </section>
         </PageFade>
