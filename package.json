@@ -34,5 +34,5 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://watarukay.github.io/poemoments"
+  "homepage": "https://watarukay.github.io/poe-moments/"
 }

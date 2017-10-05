@@ -15,7 +15,7 @@ const Layout = ({ children }) => (
   </section>
 );
 const PageFade = (props) => {
-  console.log(props)
+  // console.log(props)
   return (
     <CSSTransition
       {...props}
