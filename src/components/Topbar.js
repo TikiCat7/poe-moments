@@ -8,7 +8,7 @@ class Topbar extends Component {
         <div className='Topbar'>
           <span className='Topbar__menu-button' />
           <img width="50px" height="50px" src="http://i.imgur.com/gUqNmRN.gif" />
-          <span className="Topbar__title">POE Moments</span>
+          <span className="Topbar__title">POE Moments DEPLOYED</span>
           <Link className="Topbar__link" to="/">Home</Link>
           <Link className="Topbar__link" to="/momentlist">List</Link>
         </div>
